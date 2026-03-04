@@ -12,11 +12,7 @@ import q3_cv as stu
 # ---------------------------------------------------------------------------
 # 경로
 # ---------------------------------------------------------------------------
-DATA_DIR = (
-    pathlib.Path(__file__).resolve().parent.parent.parent
-    / "questions" / "q3_cv" / "data"
-)
-QUESTION_DIR = DATA_DIR.parent
+QUESTION_DIR = pathlib.Path(__file__).resolve().parent
 CODE_PATH = pathlib.Path(__file__).resolve().parent / "q3_cv.py"
 
 # ---------------------------------------------------------------------------

@@ -10,11 +10,7 @@ import q1_svd as stu
 # ---------------------------------------------------------------------------
 # 경로
 # ---------------------------------------------------------------------------
-DATA_DIR = (
-    pathlib.Path(__file__).resolve().parent.parent.parent
-    / "questions" / "q1_svd" / "data"
-)
-QUESTION_DIR = DATA_DIR.parent
+QUESTION_DIR = pathlib.Path(__file__).resolve().parent
 
 # ---------------------------------------------------------------------------
 # 기대값 (참조 솔루션 실행 결과)

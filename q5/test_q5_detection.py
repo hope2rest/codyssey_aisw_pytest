@@ -11,11 +11,7 @@ import q5_detection as stu
 # ---------------------------------------------------------------------------
 # 경로
 # ---------------------------------------------------------------------------
-DATA_DIR = (
-    pathlib.Path(__file__).resolve().parent.parent.parent
-    / "questions" / "q5_detection" / "data"
-)
-QUESTION_DIR = DATA_DIR.parent
+QUESTION_DIR = pathlib.Path(__file__).resolve().parent
 CODE_PATH = pathlib.Path(__file__).resolve().parent / "q5_detection.py"
 
 # ---------------------------------------------------------------------------

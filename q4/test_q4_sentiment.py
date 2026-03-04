@@ -10,11 +10,7 @@ import q4_sentiment as stu
 # ---------------------------------------------------------------------------
 # 경로
 # ---------------------------------------------------------------------------
-DATA_DIR = (
-    pathlib.Path(__file__).resolve().parent.parent.parent
-    / "questions" / "q4_sentiment" / "data"
-)
-QUESTION_DIR = DATA_DIR.parent
+QUESTION_DIR = pathlib.Path(__file__).resolve().parent
 CODE_PATH = pathlib.Path(__file__).resolve().parent / "q4_sentiment.py"
 
 # ---------------------------------------------------------------------------

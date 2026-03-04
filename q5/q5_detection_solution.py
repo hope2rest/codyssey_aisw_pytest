@@ -1,6 +1,5 @@
 import os
 import json
-import pathlib
 import unicodedata
 import numpy as np
 import pandas as pd
@@ -251,10 +250,8 @@ def main():
         "report": report,
     }
 
-    pathlib.Path("result_q5.json").write_text(
-        json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    return result
 
 
 if __name__ == "__main__":
-    main()
+    print(json.dumps(main(), ensure_ascii=False, indent=2))

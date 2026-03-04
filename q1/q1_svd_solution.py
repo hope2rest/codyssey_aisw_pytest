@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import json
-import pathlib
 
 
 def main():
@@ -46,10 +45,8 @@ def main():
         "explained_variance_ratio_top5": [round(float(r), 6) for r in evr[:5]],
     }
 
-    pathlib.Path("result_q1.json").write_text(
-        json.dumps(result, indent=2), encoding="utf-8"
-    )
+    return result
 
 
 if __name__ == "__main__":
-    main()
+    print(json.dumps(main(), indent=2))

@@ -45,9 +45,7 @@ def result():
     orig = os.getcwd()
     os.chdir(QUESTION_DIR)
     try:
-        stu.main()
-        with open("result_q3.json", "r", encoding="utf-8") as f:
-            return json.load(f)
+        return stu.main()
     finally:
         os.chdir(orig)
 

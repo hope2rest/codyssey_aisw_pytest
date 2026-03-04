@@ -23,8 +23,9 @@ def main():
         "explained_variance_ratio_top5": [],
     }
 
-    # TODO: result를 JSON 파일로 저장
+    return result
 
 
 if __name__ == "__main__":
-    main()
+    import json
+    print(json.dumps(main(), indent=2))

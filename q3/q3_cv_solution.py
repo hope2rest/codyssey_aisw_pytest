@@ -1,7 +1,6 @@
 import numpy as np
 import json
 import os
-import pathlib
 from PIL import Image
 from scipy.ndimage import label as scipy_label, binary_closing
 
@@ -112,10 +111,8 @@ def main():
         "why_learning_based": why_learning_based,
     }
 
-    pathlib.Path("result_q3.json").write_text(
-        json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    return result
 
 
 if __name__ == "__main__":
-    main()
+    print(json.dumps(main(), ensure_ascii=False, indent=2))

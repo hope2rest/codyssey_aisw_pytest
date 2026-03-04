@@ -52,8 +52,9 @@ def main():
         "business_summary": "",
     }
 
-    # TODO: result를 JSON 파일로 저장
+    return result
 
 
 if __name__ == "__main__":
-    main()
+    import json
+    print(json.dumps(main(), ensure_ascii=False, indent=2))

@@ -1,5 +1,6 @@
 import re
 import json
+import pathlib
 import unicodedata
 import numpy as np
 from collections import Counter
@@ -116,8 +117,9 @@ def main():
         "search_results": search_results,
     }
 
-    with open("result_q2.json", "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+    pathlib.Path("result_q2.json").write_text(
+        json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

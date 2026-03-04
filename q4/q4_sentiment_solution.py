@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import json
+import pathlib
 import unicodedata
 import warnings
 from sklearn.model_selection import train_test_split
@@ -128,8 +129,9 @@ def main():
         "business_summary": business_summary,
     }
 
-    with open("result_q4.json", "w", encoding="utf-8") as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+    pathlib.Path("result_q4.json").write_text(
+        json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":
